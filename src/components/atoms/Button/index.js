@@ -16,8 +16,8 @@ const styles = StyleSheet.create({
     paddingVertical: 10,
   }),
   text: (type) => ({
-    fontSize: 16,
-    fontWeight: '600',
+    fontSize: 18,
+    fontFamily: 'Nunito-SemiBold',
     color: type === 'secondary' ? 'black' : 'white',
     textAlign: 'center',
   }),
