@@ -33,7 +33,6 @@ const styles = StyleSheet.create({
   main: {
     backgroundColor: colors.white,
     flex: 1,
-    // alignItems: 'center',
   },
   content: {
     paddingHorizontal: 40,
