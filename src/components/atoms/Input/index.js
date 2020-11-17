@@ -1,6 +1,6 @@
 import React from 'react';
 import {StyleSheet, Text, View, TextInput} from 'react-native';
-import {colors} from '../../../utils';
+import {colors, fonts} from '../../../utils';
 import Gap from '../Gap';
 
 const Input = ({title}) => {
@@ -23,7 +23,7 @@ const styles = StyleSheet.create({
   },
   label: {
     color: colors.text.secondary,
-    fontFamily: 'Nunito-Regular',
+    fontFamily: fonts.primary[400],
     fontSize: 16,
     marginBottom: 6,
   },

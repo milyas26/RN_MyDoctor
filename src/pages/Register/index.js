@@ -3,10 +3,10 @@ import {StyleSheet, View} from 'react-native';
 import {Button, Gap, Header, Input} from '../../components';
 import {colors} from '../../utils';
 
-const Register = () => {
+const Register = ({navigation}) => {
   return (
     <View>
-      <Header title="Daftar Akun" />
+      <Header title="Daftar Akun" onPress={() => navigation.goBack()} />
       <View style={styles.content}>
         <Input title="Full Name" />
         <Gap height={24} />
@@ -16,7 +16,9 @@ const Register = () => {
         <Gap height={24} />
         <Input title="Password" />
         <Gap height={40} />
-        <Button>Continue</Button>
+        <Button onPress={() => navigation.navigate('UploadPhoto')}>
+          Continue
+        </Button>
       </View>
     </View>
   );
