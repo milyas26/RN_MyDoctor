@@ -1,6 +1,6 @@
 import React from 'react';
 import {TouchableOpacity} from 'react-native';
-import {ICArrow} from '../../../assets';
+import {ICArrow, ICArrow_Light} from '../../../assets';
 
 const IconOnly = ({onPress, icon}) => {
   const Icon = () => {
@@ -8,7 +8,7 @@ const IconOnly = ({onPress, icon}) => {
       return <ICArrow />;
     }
     if (icon === 'back-light') {
-      return <ICArrow />;
+      return <ICArrow_Light />;
     }
     return <ICArrow />;
   };
