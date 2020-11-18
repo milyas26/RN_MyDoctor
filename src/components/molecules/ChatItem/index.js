@@ -1,17 +1,15 @@
 import React from 'react';
 import {Image, StyleSheet, Text, View} from 'react-native';
-import {Doctor1} from '../../../assets';
+
 import {colors, fonts} from '../../../utils';
 
-const ChatItem = ({isUnread}) => {
+const ChatItem = ({isUnread, pic, name, desc}) => {
   return (
     <View style={styles.container}>
-      <Image source={Doctor1} style={styles.image} />
+      <Image source={pic} style={styles.image} />
       <View>
-        <Text style={styles.nama}>Alexander Jennie</Text>
-        <Text style={styles.chat(isUnread)}>
-          Baik bu terimakasih banyak atas waktu...
-        </Text>
+        <Text style={styles.nama}>{name}</Text>
+        <Text style={styles.chat(isUnread)}>{desc} </Text>
       </View>
     </View>
   );

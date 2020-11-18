@@ -6,7 +6,7 @@ import {
   Text,
   View,
 } from 'react-native';
-import {CoverHospital} from '../../assets';
+import {CoverHospital, Hospital1, Hospital2, Hospital3} from '../../assets';
 import {HospitalItem} from '../../components';
 import {colors, fonts} from '../../utils';
 
@@ -19,11 +19,36 @@ const Hospitals = () => {
       </ImageBackground>
       <ScrollView style={styles.main} showsVerticalScrollIndicator={false}>
         <View>
-          <HospitalItem />
-          <HospitalItem />
-          <HospitalItem />
-          <HospitalItem />
-          <HospitalItem />
+          <HospitalItem
+            type="Rumah Sakit Umum"
+            name="Citra Bunga Merdeka"
+            address="Jln. Surya Sejahtera 20"
+            pic={Hospital1}
+          />
+          <HospitalItem
+            type="Rumah Sakit Anak"
+            name="Happy Family & Kids"
+            address="Jln. Surya Sejahtera 20"
+            pic={Hospital2}
+          />
+          <HospitalItem
+            type="Rumah Sakit Jiwa"
+            name="Tingkatan Paling Atas"
+            address="Jln. Surya Sejahtera 20"
+            pic={Hospital3}
+          />
+          <HospitalItem
+            type="Rumah Sakit Umum"
+            name="Citra Bunga Merdeka"
+            address="Jln. Surya Sejahtera 20"
+            pic={CoverHospital}
+          />
+          <HospitalItem
+            type="Rumah Sakit Umum"
+            name="Citra Bunga Merdeka"
+            address="Jln. Surya Sejahtera 20"
+            pic={Hospital1}
+          />
         </View>
       </ScrollView>
     </View>
