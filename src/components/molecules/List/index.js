@@ -1,13 +1,36 @@
 import React from 'react';
 import {Image, StyleSheet, Text, TouchableOpacity, View} from 'react-native';
-import {ICNext} from '../../../assets';
+import {
+  ICEditProfile,
+  ICHelp,
+  ICLanguage,
+  ICNext,
+  ICRate,
+} from '../../../assets';
 
 import {colors, fonts} from '../../../utils';
 
-const ChatItem = ({isUnread, pic, name, desc, type, onPress}) => {
+const List = ({isUnread, pic, name, desc, type, onPress, icon}) => {
+  const Icon = () => {
+    if (icon === 'edit-profile') {
+      return <ICEditProfile />;
+    }
+    if (icon === 'language') {
+      return <ICLanguage />;
+    }
+    if (icon === 'rate') {
+      return <ICRate />;
+    }
+    if (icon === 'help') {
+      return <ICHelp />;
+    }
+
+    return <ICEditProfile />;
+  };
+
   return (
     <TouchableOpacity onPress={onPress} style={styles.container}>
-      <Image source={pic} style={styles.image} />
+      {icon ? <Icon /> : <Image source={pic} style={styles.image} />}
       <View style={styles.content}>
         <Text style={styles.nama}>{name}</Text>
         <Text style={styles.chat(isUnread)}>{desc} </Text>
@@ -17,7 +40,7 @@ const ChatItem = ({isUnread, pic, name, desc, type, onPress}) => {
   );
 };
 
-export default ChatItem;
+export default List;
 
 const styles = StyleSheet.create({
   container: {
@@ -31,6 +54,7 @@ const styles = StyleSheet.create({
   },
   content: {
     flex: 1,
+    marginLeft: 16,
   },
   image: {
     width: 46,

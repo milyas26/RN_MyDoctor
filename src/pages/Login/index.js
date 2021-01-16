@@ -17,7 +17,12 @@ const Login = ({navigation}) => {
       <Gap height={40} />
       <Button onPress={() => navigation.replace('MainApp')}>Sign In</Button>
       <Gap height={30} />
-      <Link title="Create a New Account" size={16} isCenter />
+      <Link
+        title="Create a New Account"
+        size={16}
+        isCenter
+        onPress={() => navigation.navigate('Register')}
+      />
     </View>
   );
 };

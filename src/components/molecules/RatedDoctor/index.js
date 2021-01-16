@@ -1,16 +1,16 @@
 import React from 'react';
-import {Image, StyleSheet, Text, View} from 'react-native';
+import {Image, StyleSheet, Text, TouchableOpacity, View} from 'react-native';
 import {Doctor1, Star} from '../../../assets';
 import {colors, fonts} from '../../../utils';
 
-const RatedDoctor = () => {
+const RatedDoctor = ({name, desc, avatar, onPress}) => {
   return (
-    <View style={styles.main}>
+    <TouchableOpacity style={styles.main} onPress={onPress}>
       <View style={styles.container}>
-        <Image source={Doctor1} style={styles.image} />
+        <Image source={avatar} style={styles.image} />
         <View>
-          <Text style={styles.name}>Shayna Melinda</Text>
-          <Text style={styles.profession}>Product Designer</Text>
+          <Text style={styles.name}>{name}</Text>
+          <Text style={styles.profession}>{desc}</Text>
         </View>
       </View>
       <View style={styles.stars}>
@@ -20,7 +20,7 @@ const RatedDoctor = () => {
         <Star />
         <Star />
       </View>
-    </View>
+    </TouchableOpacity>
   );
 };
 

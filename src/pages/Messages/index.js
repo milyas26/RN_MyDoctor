@@ -1,10 +1,10 @@
 import React, {useState} from 'react';
 import {StyleSheet, Text, View} from 'react-native';
-import ChatItem from '../../components/molecules/ChatItem';
+import {List} from '../../components';
 import {Doctor1, Doctor2, Doctor3} from '../../assets';
 import {colors, fonts} from '../../utils';
 
-const Messages = () => {
+const Messages = ({navigation}) => {
   const [doctors] = useState([
     {
       id: 1,
@@ -31,11 +31,12 @@ const Messages = () => {
         <Text style={styles.title}>Messages</Text>
         {doctors.map((doctor) => {
           return (
-            <ChatItem
+            <List
               key={doctor.id}
               pic={doctor.profile}
               name={doctor.name}
               desc={doctor.desc}
+              onPress={() => navigation.navigate('Chatting')}
             />
           );
         })}

@@ -12,6 +12,10 @@ import Star from './star.svg';
 import ICNext from './next_nav.svg';
 import SendDark from './send-dark.svg';
 import SendLight from './send-light.svg';
+import ICEditProfile from './edit-profile.svg';
+import ICHelp from './help.svg';
+import ICLanguage from './language.svg';
+import ICRate from './rate.svg';
 
 export {
   ICArrow,
@@ -28,4 +32,8 @@ export {
   ICArrow_Light,
   SendDark,
   SendLight,
+  ICEditProfile,
+  ICHelp,
+  ICLanguage,
+  ICRate,
 };
