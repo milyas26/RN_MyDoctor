@@ -33,7 +33,7 @@ const List = ({isUnread, pic, name, desc, type, onPress, icon}) => {
       {icon ? <Icon /> : <Image source={pic} style={styles.image} />}
       <View style={styles.content}>
         <Text style={styles.nama}>{name}</Text>
-        <Text style={styles.chat(isUnread)}>{desc} </Text>
+        <Text style={styles.chat(isUnread)}>{desc}</Text>
       </View>
       {type === 'next' && <ICNext />}
     </TouchableOpacity>
@@ -71,5 +71,6 @@ const styles = StyleSheet.create({
     fontSize: 12,
     fontFamily: fonts.primary[600],
     color: isUnread ? colors.text.primary : colors.text.secondary,
+    textTransform: 'capitalize',
   }),
 });

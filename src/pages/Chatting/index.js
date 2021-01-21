@@ -3,12 +3,15 @@ import {StyleSheet, Text, View} from 'react-native';
 import {BubbleChat, Header, InputChat} from '../../components';
 import {colors, fonts} from '../../utils';
 
-const Chatting = ({navigation}) => {
+const Chatting = ({navigation, route}) => {
+  const dataDoctor = route.params;
   return (
     <View style={styles.container}>
       <Header
         type="dark-profile"
-        title="Nairoby Putri Hayza"
+        desc={dataDoctor.data.category}
+        title={dataDoctor.data.fullName}
+        photo={{uri: dataDoctor.data.photo}}
         onPress={() => navigation.goBack()}
       />
       <View style={styles.chat}>
@@ -17,7 +20,11 @@ const Chatting = ({navigation}) => {
         <BubbleChat />
         <BubbleChat isMe />
       </View>
-      <InputChat />
+      <InputChat
+        value="Hello"
+        onChangeText={() => alert('Text Clicked')}
+        onPress={() => alert('Button Pressed')}
+      />
     </View>
   );
 };

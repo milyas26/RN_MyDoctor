@@ -3,7 +3,7 @@ import {Image, StyleSheet, Text, TouchableOpacity, View} from 'react-native';
 import {Doctor1, Star} from '../../../assets';
 import {colors, fonts} from '../../../utils';
 
-const RatedDoctor = ({name, desc, avatar, onPress}) => {
+const RatedDoctor = ({name, desc, avatar, rate, onPress}) => {
   return (
     <TouchableOpacity style={styles.main} onPress={onPress}>
       <View style={styles.container}>
@@ -47,11 +47,13 @@ const styles = StyleSheet.create({
     fontFamily: fonts.primary[600],
     fontSize: 16,
     color: colors.text.primary,
+    textTransform: 'capitalize',
   },
   profession: {
     color: colors.text.secondary,
     fontSize: 12,
     fontFamily: fonts.primary[600],
+    textTransform: 'capitalize',
   },
   stars: {
     flexDirection: 'row',
